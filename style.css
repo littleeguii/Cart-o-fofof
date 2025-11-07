@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.titulo {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    animation: aparecer 2s ease;
+}
+
+.mensagem {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #fff;
+    color: #ff4d6d;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    background-color: #ffe3e3;
+}
+
+.heart {
+    position: fixed;
+    font-size: 24px;
+    color: #ff4d6d;
+    animation: flutuar 5s linear infinite;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
